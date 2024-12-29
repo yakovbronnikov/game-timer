@@ -1,7 +1,7 @@
 let timerElement = document.getElementById('timer')
 let timerButton = document.querySelector('.round-timer')
 let startButton = document.querySelector('.round-start')
-let duration = 10
+let duration = 30
 let timerInterval
 
 let startAudio = document.getElementById('start-audio')
