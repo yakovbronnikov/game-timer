@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+}
+
+body {
+    height: 100vh;
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    color: #FFFFFF;
+    text-align: center;
+    padding: 24px 0px 48px;
+    font-weight: 200;
+}
+
+.header span {
+    font-weight: 600;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    text-align: center;
+    margin: 16px;
+    position: relative;
+    width: min-content;
+    overflow: hidden;
+}
+
+.duration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.duration p {
+    width: 64px;
+}
+
+.duration-button {
+    padding: 16px;
+    background: #2B2B2B;
+    width: 64px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 200ms;
+}
+
+.stop {
+    border-radius: 8px;
+    background: #2B2B2B;
+    cursor: pointer;
+    transition: 200ms;
+
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+
+    padding: 16px;
+    pointer-events: none;
+    opacity: 0;
+}
+
+
+.duration-appear {
+    animation: duration-appear 200ms ease-in-out forwards;
+    pointer-events: auto;
+}
+
+.duration-fade {
+    animation: duration-fade 200ms ease-in-out forwards;
+    pointer-events: none;
+}
+
+@keyframes duration-appear {
+    0% {
+        opacity: 0;
+        translate: 0 -64px;
+    }
+
+    100% {
+        opacity: 1;
+        translate: 0;
+    }
+}
+
+@keyframes duration-fade {
+    0% {
+        opacity: 1;
+        translate: 0;
+    }
+
+    100% {
+        opacity: 0;
+        translate: 0 64px;
+    }
+}
+
+
+.playground {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.round {
+    width: 280px;
+    height: 280px;
+    background: #FFFFFF;
+    border-radius: 140px;
+    cursor: pointer;
+    transition: 200ms;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.round-timer {
+    font-size: 80px;
+    color: #FFFFFF;
+    background: #2B2B2B;
+}
+
+
+.duration-button:hover,
+.round-timer:hover,
+.stop:hover {
+    background: #363636;
+}
+
+.round-hide {
+    display: none;
+}
+
+.tip {
+    color: #646464;
+    width: 280px;
+    text-align: center;
+    padding: 32px;
+}

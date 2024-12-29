@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Timer</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+</head>
+
+<body>
+    <div class="header">Game <span>Timer</span></div>
+
+    <div class="controls">
+        <div class="duration">
+            <div class="duration-button" onclick="decreaseDuration()">-</div>
+            <p>10</p>
+            <div class="duration-button" onclick="increaseDuration()">+</div>
+        </div>
+
+        <div class="stop" onclick="stopGame()">◼︎</div>
+    </div>
+
+    <div class="playground">
+        <div class="round round-start" onclick="startGame()">
+            START
+        </div>
+
+        <div class="round round-timer round-hide" onclick="startGame()">
+            <div id="timer"></div>
+        </div>
+    </div>
+
+    <div class="tip">
+        Tap to start a game
+    </div>
+
+    <audio src="assets/start.ogg" id="start-audio"></audio>
+    <audio src="assets/finish.ogg" id="finish-audio"></audio>
+    <audio src="assets/timer.ogg" id="timer-audio"></audio>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
