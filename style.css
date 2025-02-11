@@ -6,6 +6,10 @@
     box-sizing: border-box;
     font-family: "Montserrat", serif;
     font-optical-sizing: auto;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 body {
